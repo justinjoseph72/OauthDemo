@@ -10,4 +10,9 @@ public class PeopleController {
     public String getPeople(){
         return "Hi People";
     }
+
+    @GetMapping(path = "/folks")
+    public String getFolks(){
+        return "Hi Folks";
+    }
 }

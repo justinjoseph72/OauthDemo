@@ -1,4 +1,4 @@
-package com.justin.app.testoauth.users;
+package com.justin.app.testoauth.domain.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

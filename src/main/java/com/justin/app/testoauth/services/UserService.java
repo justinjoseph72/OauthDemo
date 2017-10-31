@@ -1,6 +1,6 @@
 package com.justin.app.testoauth.services;
 
-import com.justin.app.testoauth.users.User;
+import com.justin.app.testoauth.domain.user.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

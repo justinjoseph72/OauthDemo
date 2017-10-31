@@ -14,6 +14,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 @EnableAuthorizationServer
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
+    public static String RESOURCE_ID ="resource";
+
     @Autowired
     @Qualifier("userDetailsService")
     private UserDetailsService userDetailsService;
@@ -32,6 +34,8 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient("robin").secret("joseph")
                 .accessTokenValiditySeconds(3600)
-                .scopes("read","write").authorizedGrantTypes("password","refresh_token").resourceIds("resource");
+                .scopes("read","write").authorizedGrantTypes("password","refresh_token").resourceIds(RESOURCE_ID);
     }
+
+
 }
